@@ -7,12 +7,12 @@ import { useSelector } from 'react-redux';
 const Navbar = () => {
     const { authUser } = useSelector(store => store.auth);
     return (
-        <div className='bg-white'>
-            <div className='flex items-center justify-between mx-auto max-w-7xl h-16'>
+        <div className='bg-blue'>
+            <div className='flex items-center justify-between mx-auto max-w-3xl h-16'>
                 <div>
-                    <h1 className='text-2xl font-bold'>Job<span className='text-[#F83002]'>Hunt</span></h1>
+                    <h1 className='text-4xl font-bold'>Engineers<span className='text-[#faf5f5]'>Chowk</span></h1>
                 </div>
-                <div className='flex items-center gap-12'>
+                <div className='flex items-center gap-5'>
                     <ul className='flex font-medium items-center gap-5'>
                         {
                             authUser && authUser.role === "recruiter" ? (
