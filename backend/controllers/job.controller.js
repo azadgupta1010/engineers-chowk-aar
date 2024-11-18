@@ -1,3 +1,4 @@
+/*
 import { Job } from "../models/job.model.js";
 
 export const postJob = async (req, res) => {
@@ -84,3 +85,114 @@ export const getJobByLoggedAdminUser = async (req, res) => {
         return res.status(400).json({ message: error });
     }
 }
+*/
+import { Job } from "../models/job.model.js";
+
+// Post a new job
+export const postJob = async (req, res) => {
+    try {
+        const { title, description, requirements, salary, location, jobType, experience, position, companyId } = req.body;
+
+        const userId = req.id;
+
+        // Check if all required fields are provided
+        if (!title || !description || !requirements || !salary || !location || !jobType || !experience || !position || !companyId) {
+            return res.status(400).json({
+                message: "All fields are required",
+                success: false
+            });
+        }
+
+        // Create the job
+        const job = await Job.create({
+            title,
+            description,
+            requirements: requirements.split(","),
+            salary: Number(salary),
+            location,
+            jobType,
+            experienceLevel: experience,
+            position,
+            company: companyId,
+            created_by: userId
+        });
+
+        return res.status(201).json({
+            message: "New job created successfully.",
+            job,
+            success: true
+        });
+    } catch (error) {
+        console.error("Error in postJob: ", error);
+        return res.status(500).json({ message: "Failed to create a new job.", success: false });
+    }
+};
+
+// Get all jobs with optional keyword search
+export const getAllJobs = async (req, res) => {
+    try {
+        const keyword = req.query.keyword || "";
+        
+        const query = {
+            $or: [
+                { title: { $regex: keyword, $options: "i" } },
+                { description: { $regex: keyword, $options: "i" } }
+            ]
+        };
+
+        const jobs = await Job.find(query).populate({ path: "company" }).sort({ createdAt: -1 });
+
+        if (jobs.length === 0) {
+            return res.status(404).json({ message: "No jobs found", success: false });
+        }
+
+        return res.status(200).json({ jobs, success: true });
+    } catch (error) {
+        console.error("Error in getAllJobs: ", error);
+        return res.status(500).json({ message: "Failed to get jobs", success: false });
+    }
+};
+
+// Get a job by its ID
+export const getJobById = async (req, res) => {
+    try {
+        const jobId = req.params.id;
+        const job = await Job.findById(jobId).populate({
+            path: "applications"
+        });
+
+        if (!job) {
+            return res.status(404).json({
+                message: "Job not found.",
+                success: false
+            });
+        }
+
+        return res.status(200).json({ success: true, job });
+    } catch (error) {
+        console.error("Error in getJobById: ", error);
+        return res.status(500).json({ message: "Failed to get job", success: false });
+    }
+};
+
+// Admin - Get all jobs created by the logged-in user
+export const getJobByLoggedAdminUser = async (req, res) => {
+    try {
+        const userId = req.id;
+        const jobs = await Job.find({ created_by: userId })
+            .populate({ path: "company" })
+            .sort({ createdAt: -1 });
+
+        if (jobs.length === 0) {
+            return res.status(404).json({ message: "No jobs found", success: false });
+        }
+
+        return res.status(200).json({
+            jobs,
+            success: true
+        });
+    } catch (error) {
+        console.error("Error in getJobByLoggedAdminUser: ", error);
+        return res.status(500).json({ message: "Failed to fetch jobs", success: false });
+    }
+};
