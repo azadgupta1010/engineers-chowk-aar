@@ -1,9 +1,10 @@
+
 import { User } from "../models/user.model.js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import getDataUri from "../utils/datauri.js";
 import cloudinary from "../utils/cloudinary.js";
-
+/*
 export const register = async (req, res) => {
     try {
         const { fullname, email, phoneNumber, password, role } = req.body;
@@ -115,6 +116,65 @@ export const updateProfile = async (req, res) => {
         if (cloudResponse) {
             user.profile.resume = cloudResponse.secure_url; // Save the Cloudinary URL
             user.profile.resumeOriginalName = file.originalname; // Save the original file name
+        }
+
+        await user.save();
+
+        // Prepare the user data to send in the response
+        user = {
+            _id: user._id,
+            fullname: user.fullname,
+            email: user.email,
+            phoneNumber: user.phoneNumber,
+            role: user.role,
+            profile: user.profile
+        };
+
+        return res.status(200).json({
+            message: "Profile updated successfully.",
+            user,
+            success: true
+        });
+    } catch (error) {
+        console.log(error);
+        return res.status(500).json({ message: "Server error", success: false });
+    }
+};
+*/
+export const updateProfile = async (req, res) => {
+    try {
+        const { fullname, email, phoneNumber, bio, skills } = req.body;
+        const file = req.file;
+
+        if (!fullname || !email || !phoneNumber || !bio || !skills) {
+            return res.status(400).json({ message: "All fields are required", success: false });
+        }
+
+        const skillsArray = skills.split(",");
+        const userId = req.id; // Assume req.id contains the user's ID
+
+        let user = await User.findById(userId);
+        if (!user) {
+            return res.status(400).json({ message: "User not found", success: false });
+        }
+
+        // Updating the profile
+        if (fullname) user.fullname = fullname;
+        if (email) user.email = email;
+        if (phoneNumber) user.phoneNumber = phoneNumber;
+        if (bio) user.profile.bio = bio;
+        if (skills) user.profile.skills = skillsArray;
+
+        // Handle resume file upload (if present)
+        if (file) {
+            const fileUri = getDataUri(file);
+            const cloudResponse = await cloudinary.uploader.upload(fileUri.content);
+            
+            // Update resume URL and original file name
+            if (cloudResponse) {
+                user.profile.resume = cloudResponse.secure_url; // Save the Cloudinary URL
+                user.profile.resumeOriginalName = file.originalname; // Save the original file name
+            }
         }
 
         await user.save();
