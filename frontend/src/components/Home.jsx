@@ -17,16 +17,16 @@ const Home = () => {
         if (authUser?.role === 'recruiter') {
             navigate("/admin/companies");
         }
-    },[])
+    },[authUser, navigate])
     return (
-        <div>
+        <div className="bg-gradient-to-r from-gray-900 via-black to-blue-700 text-white min-h-screen">
             <Navbar />
             <HeroSection />
             <CategoryCarousel />
             <LatestJobs />
             <Footer />
         </div>
-    )
+    );
 }
 
 export default Home

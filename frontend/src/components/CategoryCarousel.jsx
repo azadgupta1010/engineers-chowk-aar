@@ -13,13 +13,12 @@ import { setSearchText } from "@/redux/jobSlice"
 import { useNavigate } from "react-router-dom"
 
 const category = [
-    "Frontend Developer",
-    "Backend Developer",
-    "Data Engineer",
-    "Data Science",
-    "Graphic Designer",
-    "UI Developer",
-    "Wordpress Developer",
+    "Civil Engineering",
+    "Mechanical Engineering",
+    "Chemical Engineering",
+    "Electrical engineering",
+    "Computer Engineering",
+    "Agricultural engineering",
 ]
 
 export function CategoryCarousel() {
@@ -42,5 +41,6 @@ export function CategoryCarousel() {
             <CarouselPrevious />
             <CarouselNext />
         </Carousel>
+        
     )
 }

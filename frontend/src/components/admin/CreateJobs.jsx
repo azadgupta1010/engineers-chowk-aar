@@ -17,7 +17,7 @@ const CreateJobs = () => {
         requirements: "",
         salary: "",
         location: "",
-        jobType: "",
+        workType: "",
         experience: "",
         position: 0,
         companyId: ""
@@ -60,7 +60,7 @@ const CreateJobs = () => {
             requirements: "",
             salary: "",
             location: "",
-            jobType: "",
+            workType: "",
             experience: "",
             position: 0,
             companyId: ""
@@ -127,7 +127,7 @@ const CreateJobs = () => {
                             <Label>Job Type</Label>
                             <Input
                                 type="text"
-                                name="jobType"
+                                name="workType"
                                 value={input.jobType}
                                 onChange={changeEventHandler}
                                 className="focus-visible:ring-offset-0 focus-visible:ring-0 my-1"
