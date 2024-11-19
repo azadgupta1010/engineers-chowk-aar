@@ -1,4 +1,4 @@
-/*
+
 import mongoose from "mongoose";
 
 const jobSchema = new mongoose.Schema({
@@ -54,7 +54,7 @@ const jobSchema = new mongoose.Schema({
     ]
 }, { timestamps: true });
 export const Job = mongoose.model("Job", jobSchema);
-*/
+/*
 import mongoose from "mongoose";
 
 // Define the Job schema
@@ -137,3 +137,4 @@ jobSchema.virtual('companyDetails', {
 
 // Model export
 export const Job = mongoose.model("Job", jobSchema);
+*/
