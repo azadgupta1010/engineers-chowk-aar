@@ -1,4 +1,4 @@
-/*
+
 import DataUriParser from "datauri/parser.js";
 import path from "path";
 
@@ -9,7 +9,7 @@ const getDataUri = (file) => {
 }
 
 export default getDataUri;
-*/
+/*
 import DataUriParser from "datauri/parser.js";
 import path from "path";
 
@@ -29,3 +29,4 @@ const getDataUri = (file) => {
 }
 
 export default getDataUri;
+*/
