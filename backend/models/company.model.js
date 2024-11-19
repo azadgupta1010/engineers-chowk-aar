@@ -1,4 +1,4 @@
-/*
+
 import mongoose from "mongoose";
 
 const companySchema = new mongoose.Schema({
@@ -26,7 +26,7 @@ const companySchema = new mongoose.Schema({
     }
 }, { timestamps: true });
 export const Company = mongoose.model("Company", companySchema);
-*/
+/*
 import mongoose from "mongoose";
 
 // Schema definition for Company
@@ -85,3 +85,4 @@ companySchema.virtual("userDetails", {
 
 // Model export
 export const Company = mongoose.model("Company", companySchema);
+*/
