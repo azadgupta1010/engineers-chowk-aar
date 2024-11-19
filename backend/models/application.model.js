@@ -1,4 +1,4 @@
-/*
+
 import mongoose from "mongoose";
 
 const applicationSchema = new mongoose.Schema({
@@ -19,7 +19,7 @@ const applicationSchema = new mongoose.Schema({
     } 
 }, { timestamps: true });
 export const Application = mongoose.model("Application", applicationSchema);
-*/
+/*
 import mongoose from "mongoose";
 
 // Schema definition
@@ -78,3 +78,4 @@ applicationSchema.pre("save", function (next) {
 
 // Model export
 export const Application = mongoose.model("Application", applicationSchema);
+*/
