@@ -1,4 +1,4 @@
-/*
+
 import { Application } from "../models/application.model.js";
 import { Job } from "../models/job.model.js";
 
@@ -130,7 +130,7 @@ export const updateStatus = async (req, res) => {
     }
 };
 
-*/
+/*
 export const applyJob = async (req, res) => {
     try {
         const userId = req.id;
@@ -280,3 +280,4 @@ export const updateStatus = async (req, res) => {
         });
     }
 };
+*/
