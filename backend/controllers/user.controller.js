@@ -4,7 +4,7 @@ import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import getDataUri from "../utils/datauri.js";
 import cloudinary from "../utils/cloudinary.js";
-/*
+
 export const register = async (req, res) => {
     try {
         const { fullname, email, phoneNumber, password, role } = req.body;
@@ -140,7 +140,7 @@ export const updateProfile = async (req, res) => {
         return res.status(500).json({ message: "Server error", success: false });
     }
 };
-*/
+/*
 export const updateProfile = async (req, res) => {
     try {
         const { fullname, email, phoneNumber, bio, skills } = req.body;
@@ -199,3 +199,4 @@ export const updateProfile = async (req, res) => {
         return res.status(500).json({ message: "Server error", success: false });
     }
 };
+*/
