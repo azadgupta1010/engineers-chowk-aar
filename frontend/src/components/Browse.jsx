@@ -18,6 +18,7 @@ const Browse = () => {
   }, [])
   return (
     <div>
+              <div className="bg-gradient-to-r from-gray-900 via-black to-blue-700 text-white min-h-screen">
       <Navbar />
       <div className='max-w-7xl mx-auto my-10'>
         <h1 className='font-bold text-xl my-10'>Search Results ({allJobs?.length})</h1>
@@ -42,6 +43,7 @@ const Browse = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   )
 }

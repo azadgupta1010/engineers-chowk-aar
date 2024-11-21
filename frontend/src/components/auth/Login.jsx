@@ -54,7 +54,7 @@ const Login = () => {
         }
     },[])
     return (
-        <>
+        <div className="bg-gradient-to-r from-gray-900 via-black to-blue-700 text-white min-h-screen">
             <Navbar />
             <div className='flex items-center justify-center max-w-7xl mx-auto'>
                 <form onSubmit={submitHandler} className='w-1/2 border border-gray-200 rounded-md p-4 my-10'>
@@ -114,7 +114,7 @@ const Login = () => {
                     <span className='text-sm'>Don't have an account? <Link to={"/signup"} className='text-blue-500 cursor-pointer underline'>Signup</Link></span>
                 </form>
             </div>
-        </>
+        </div>
     )
 }
 

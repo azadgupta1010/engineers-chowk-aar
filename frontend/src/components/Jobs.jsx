@@ -34,7 +34,7 @@ const Jobs = () => {
         }
     })
     return (
-        <div className='bg-gray-100 h-screen'>
+        <div className='bg-gradient-to-r from-gray-900 via-black to-blue-700 h-screen'>
             <Navbar />
             <div className='max-w-7xl mx-auto mt-5'>
                 <div className='flex gap-5'>
@@ -67,7 +67,7 @@ const Jobs = () => {
                 </div> 
             </div>
         </div>
-
+   
             )
 }
 
