@@ -1,4 +1,4 @@
-/*
+
 import express from "express";
 import isAuthenticated from "../auth/isAuthenticated.js";
 import { getAllJobs, getJobById, getJobByLoggedAdminUser, postJob } from "../controllers/job.controller.js";
@@ -12,7 +12,7 @@ router.route("/:id").get(isAuthenticated, getJobById);
 
 
 export default router;
-*/
+/*
 import express from "express";
 import isAuthenticated from "../auth/isAuthenticated.js";
 import { getAllJobs, getJobById, getJobByLoggedAdminUser, postJob } from "../controllers/job.controller.js";
@@ -32,3 +32,4 @@ router.route("/jobs/admin").get(isAuthenticated, getJobByLoggedAdminUser);
 router.route("/jobs/:id").get(isAuthenticated, getJobById);
 
 export default router;
+*/

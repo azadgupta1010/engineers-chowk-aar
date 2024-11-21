@@ -1,9 +1,9 @@
-/*
+
 import multer from "multer";
 
 const storage = multer.memoryStorage();
 export const singleUpload = multer({storage}).single("file");
- */
+ /*
 import multer from "multer";
 
 // Allowed file types (for example: images)
@@ -40,3 +40,4 @@ export const handleFileUploadErrors = (err, req, res, next) => {
     }
     next(); // Proceed to the next middleware if no error
 };
+*/

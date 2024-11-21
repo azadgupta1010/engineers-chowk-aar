@@ -1,4 +1,4 @@
-/*
+
 import { Company } from "../models/company.model.js";
 import cloudinary from "../utils/cloudinary.js";
 import getDataUri from "../utils/datauri.js";
@@ -86,7 +86,7 @@ export const updateCompanyInformation = async (req, res) => {
         });
     }
 }
-*/
+/*
 import { Company } from "../models/company.model.js";
 import cloudinary from "../utils/cloudinary.js";
 import getDataUri from "../utils/datauri.js";
@@ -202,3 +202,4 @@ export const updateCompanyInformation = async (req, res) => {
         });
     }
 };
+*/

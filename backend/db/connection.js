@@ -1,4 +1,4 @@
-/* 
+
 // ye wala code pehle tha mne change kr diya
 
 
@@ -13,7 +13,7 @@ const connectDB = async () => {
     }
 }
 export default connectDB;
-*/
+/*
 import mongoose from "mongoose";
 
 const connectDB = async () => {
@@ -42,3 +42,4 @@ process.on("SIGINT", async () => {
 });
 
 export default connectDB;
+*/

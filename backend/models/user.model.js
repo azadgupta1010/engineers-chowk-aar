@@ -1,4 +1,4 @@
-/*
+
 import mongoose from "mongoose";
 
 const userSchema = new mongoose.Schema({
@@ -37,7 +37,7 @@ const userSchema = new mongoose.Schema({
     },
 }, { timestamps: true });
 export const User = mongoose.model("User", userSchema);
-*/
+/*
 import mongoose from "mongoose";
 import bcrypt from "bcrypt";
 
@@ -108,3 +108,4 @@ userSchema.methods.matchPassword = async function(enteredPassword) {
 userSchema.index({ email: 1 });
 
 export const User = mongoose.model("User", userSchema);
+*/

@@ -1,4 +1,4 @@
-/*
+
 import express from "express";
 import { applyJob, getApplicants, getAppliedJobs, updateStatus } from "../controllers/application.controller.js";
 import isAuthenticated from "../auth/isAuthenticated.js";
@@ -10,7 +10,7 @@ router.route("/:id/applicants").get(isAuthenticated, getApplicants);
 router.route("/status/:id/update").post(isAuthenticated, updateStatus);
 
 export default router;
-*/
+/*
 import express from "express";
 import { applyJob, getApplicants, getAppliedJobs, updateStatus } from "../controllers/application.controller.js";
 import isAuthenticated from "../auth/isAuthenticated.js";
@@ -30,3 +30,4 @@ router.route("/applications/:id/applicants").get(isAuthenticated, getApplicants)
 router.route("/applications/:id/status").put(isAuthenticated, updateStatus);
 
 export default router;
+*/

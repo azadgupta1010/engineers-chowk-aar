@@ -1,4 +1,4 @@
-/*
+
 import express from "express";
 import { getCompany, getCompanyById, registerCompany, updateCompanyInformation } from "../controllers/company.controller.js";
 import isAuthenticated from "../auth/isAuthenticated.js";
@@ -12,7 +12,7 @@ router.route("/getcompany/:id").get( isAuthenticated ,getCompanyById);
 router.route("/update/:id").put( isAuthenticated,singleUpload, updateCompanyInformation);
 
 export default router;
-*/
+/*
 import express from "express";
 import { getCompany, getCompanyById, registerCompany, updateCompanyInformation } from "../controllers/company.controller.js";
 import isAuthenticated from "../auth/isAuthenticated.js";
@@ -33,3 +33,4 @@ router.route("/companies/:id").get(isAuthenticated, getCompanyById);
 router.route("/companies/:id").put(isAuthenticated, singleUpload, updateCompanyInformation);
 
 export default router;
+*/

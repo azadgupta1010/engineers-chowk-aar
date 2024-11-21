@@ -1,4 +1,4 @@
-/*
+
 import { Job } from "../models/job.model.js";
 
 export const postJob = async (req, res) => {
@@ -85,7 +85,7 @@ export const getJobByLoggedAdminUser = async (req, res) => {
         return res.status(400).json({ message: error });
     }
 }
-*/
+/*
 import { Job } from "../models/job.model.js";
 
 // Post a new job
@@ -196,3 +196,4 @@ export const getJobByLoggedAdminUser = async (req, res) => {
         return res.status(500).json({ message: "Failed to fetch jobs", success: false });
     }
 };
+*/

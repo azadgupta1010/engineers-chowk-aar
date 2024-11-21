@@ -1,4 +1,4 @@
-/*
+
 import {v2 as cloudinary} from 'cloudinary';
 import dotenv from "dotenv";
 dotenv.config();
@@ -9,7 +9,7 @@ cloudinary.config({
   api_secret: process.env.API_SECRET 
 });
 export default cloudinary;
-*/
+/*
 import { v2 as cloudinary } from 'cloudinary';
 import dotenv from "dotenv";
 
@@ -31,3 +31,4 @@ cloudinary.config({
 });
 
 export default cloudinary;
+*/
