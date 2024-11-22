@@ -1,3 +1,5 @@
+
+
 import express, { urlencoded } from "express";
 import connectDB from "./db/connection.js";
 import dotenv from "dotenv";
@@ -25,7 +27,7 @@ app.use(bodyParser.urlencoded({extended:true}))
 app.use(urlencoded({extended:true}));
 app.use(cookieParser());
 const corsOptions = {
-    origin:"https://azadjobportal-youtube-main.onrender.com",
+    origin:"https://jobportal-youtube.onrender.com",
     credentials:true
 }
 app.use(cors(corsOptions));
