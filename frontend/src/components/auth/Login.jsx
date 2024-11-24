@@ -28,7 +28,7 @@ const Login = () => {
         
         try {
             dispatch(setLoading(true));
-            const res = await axios.post("http://localhost:5173/login", input, {
+            const res = await axios.post("http://localhost:5173/api/v1/user/login", input, {
                 headers: {
                     'Content-Type': 'application/json'
                 },
@@ -66,7 +66,7 @@ const Login = () => {
                             name="email"
                             value={input.email}
                             onChange={changeEventHandler}
-                            placeholder="patel@gmail.com"
+                            placeholder="azadgupta1712@gmail.com"
                         />
                     </div>
                     <div className='my-2'>

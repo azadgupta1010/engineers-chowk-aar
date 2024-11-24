@@ -44,7 +44,7 @@ const Singup = () => {
     } 
     try {
       dispatch(setLoading(true));
-      const res = await axios.post("https://azadjobportal-youtube-main.onrender.com/api/v1/user/register", formData, {
+      const res = await axios.post("http://localhost:5173/api/v1/user/register", formData, {
         headers: {
           "Content-Type": "multipart/form-data"
         },
@@ -81,7 +81,7 @@ const Singup = () => {
               value={input.fullname}
               name="fullname"
               onChange={changeEventHandler}
-              placeholder="patel"
+              placeholder="azad"
             />
           </div>
           <div className='my-2'>
@@ -91,7 +91,7 @@ const Singup = () => {
               value={input.email}
               name="email"
               onChange={changeEventHandler}
-              placeholder="patel@gmail.com"
+              placeholder="azadgupta1712@gmail.com"
             />
           </div>
           <div className='my-2'>
@@ -101,7 +101,7 @@ const Singup = () => {
               value={input.phoneNumber}
               name="phoneNumber"
               onChange={changeEventHandler}
-              placeholder="+918080808080"
+              placeholder="+9170152779**"
             />
           </div>
           <div className='my-2'>

@@ -27,7 +27,7 @@ app.use(bodyParser.urlencoded({extended:true}))
 app.use(urlencoded({extended:true}));
 app.use(cookieParser());
 const corsOptions = {
-    origin:"https://jobportal-youtube.onrender.com",
+    origin:"http://localhost:5173",
     credentials:true
 }
 app.use(cors(corsOptions));
