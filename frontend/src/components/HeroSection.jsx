@@ -29,13 +29,14 @@ const HeroSection = () => {
                     <p className='text-gray-500'>Welcome to Engineers Chowk - the premier platform dedicated to empowering engineers across all disciplines. Our mission is to bridge the gap between innovative talent and the opportunities that drive global progress. Here’s why Engineers Chowk is your ultimate destination:</p>
                 </div>
                 <div className='flex w-[40%] shadow-lg border pl-3 border-gray-200 rounded-full items-center gap-4 mx-auto'>
-                    <input
+                    <input 
                         type="text"
                         name="query"
                         value={query}
                         onChange={(e) => setQuery(e.target.value)}
                         placeholder="Find your work and get paid"
-                        className="outline-none border-none w-full"
+                       className="outline-none border-none w-full bg-transparent"
+                        
                     />
                     <Button onClick={searchJobHandler} className='rounded-r-full bg-[#6A38C2]'>
                         <Search className='h-5 w-5' />
