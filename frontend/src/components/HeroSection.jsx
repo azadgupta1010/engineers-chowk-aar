@@ -23,7 +23,7 @@ const HeroSection = () => {
                     <div className="text-[#F83002] px-4 py-2 rounded-full bg-gray-100 font-medium" >Your Engineering Talent Meets Opportunity.</div>
                 </div>
                 <div>
-                    <h1 className='text-5xl font-bold'>Every Engineers choice <br /> choice  <span className='text-[#2d0794]'>for a Brighter future</span></h1>
+                    <h1 className='text-5xl font-bold'><span className='text-[#FFFFFF]'>Every Engineers choice </span><br /> choice  <span className='text-[#2d0794]'>for a Brighter future</span></h1>
                 </div>
                 <div>
                     <p className='text-gray-500'>Welcome to Engineers Chowk - the premier platform dedicated to empowering engineers across all disciplines. Our mission is to bridge the gap between innovative talent and the opportunities that drive global progress. Here’s why Engineers Chowk is your ultimate destination:</p>

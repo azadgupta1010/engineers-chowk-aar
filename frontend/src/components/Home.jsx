@@ -19,7 +19,7 @@ const Home = () => {
         }
     },[authUser, navigate])
     return (
-        <div className="bg-gradient-to-r from-blue-800 via-gray-900 to-black text-white p-10  ">
+        <div className="bg-gradient-to-r from-gray-900 via-black to-blue-700 text-blue min-h-screen">
           <Navbar />
             <HeroSection />
             <CategoryCarousel />
